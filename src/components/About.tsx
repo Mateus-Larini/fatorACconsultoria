@@ -22,7 +22,7 @@ export const About = () => {
               Willian Silva
             </h2>
             <p className="text-xl md:text-2xl text-accent font-semibold mb-4">
-              Engenheiro Civil Especialista em Concreto Usinado
+              Engenheiro Civil e Pós-Graduando em Tecnologia do Concreto
             </p>
             <div className="w-24 h-1 bg-accent mx-auto rounded-full" />
           </div>

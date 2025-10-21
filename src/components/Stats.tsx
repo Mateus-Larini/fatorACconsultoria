@@ -4,7 +4,7 @@ const stats = [
   {
     icon: TrendingUp,
     value: "35%",
-    label: "Economia Média em Custos",
+    label: "Economia Média em Custo Benefício",
     description: "Redução comprovada em projetos"
   },
   {

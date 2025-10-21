@@ -97,7 +97,7 @@ export const Problems = () => {
             A Solução Está em <span className="text-accent">Decisões Técnicas Informadas</span>
           </h3>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Nossa consultoria elimina esses riscos, transformando incerteza em segurança e 
+            Nossa consultoria em concreto usinado elimina esses riscos, transformando incerteza em segurança e 
             desperdício em economia
           </p>
         </div>

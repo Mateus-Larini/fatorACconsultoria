@@ -21,7 +21,7 @@ export const InstagramSection = () => {
             
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
               Dicas Exclusivas de{" "}
-              <span className="text-accent">Concreto Usinado</span>
+              <span className="text-accent">Concreto Usinado para Maringá e região</span>
             </h2>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">

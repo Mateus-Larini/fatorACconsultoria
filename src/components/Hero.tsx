@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Instagram, CheckCircle, Building2, TrendingUp, Shield, Award } from "lucide-react";
-import willianPhoto from "@/assets/willian-photo.jpg";
+import willianPhotoConcretoUsinado from "@/assets/willian-photo.jpg";
 
 export const Hero = () => {
   return (
@@ -82,7 +82,7 @@ export const Hero = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl max-w-lg mx-auto lg:max-w-none">
               <div className="aspect-[3/4] relative">
                 <img
-                  src={willianPhoto}
+                  src={willianPhotoConcretoUsinado}
                   alt="Willian Silva - Engenheiro Civil Especialista em Concreto Usinado"
                   className="w-full h-full object-cover object-[center_20%]"
                 />

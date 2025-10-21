@@ -16,7 +16,7 @@ export const Footer = () => {
             </p>
             <div className="flex items-center gap-2 mt-4 text-sm">
               <MapPin className="text-accent" size={16} />
-              <span className="text-muted-foreground">Atendimento em todo o Brasil</span>
+              <span className="text-muted-foreground">Atendimento em Maringá e região</span>
             </div>
           </div>
 

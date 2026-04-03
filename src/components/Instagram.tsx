@@ -1,12 +1,13 @@
 import { Button } from "@/components/ui/button";
-import { Instagram, Heart, MessageCircle, Bookmark, Sparkles, TrendingUp } from "lucide-react";
+import { MessageCircle, ShieldCheck, Bookmark, Sparkles, TrendingUp } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 export const InstagramSection = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-background to-card relative overflow-hidden">
       {/* Decorative background icons */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-5">
-        <Instagram className="absolute top-20 right-20 animate-pulse" size={120} />
+        <MessageCircle className="absolute top-20 right-20 animate-pulse" size={120} />
         <Sparkles className="absolute bottom-20 left-20 animate-pulse" size={100} style={{ animationDelay: '1s' }} />
         <TrendingUp className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rotate-12" size={150} />
       </div>
@@ -15,30 +16,30 @@ export const InstagramSection = () => {
           {/* Header */}
           <div className="space-y-4">
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-accent/10 border border-accent/20 rounded-full">
-              <Instagram className="text-accent" size={20} />
-              <span className="text-accent font-semibold text-sm">Acompanhe Nosso Conteúdo</span>
+              <MessageCircle className="text-accent" size={20} />
+              <span className="text-accent font-semibold text-sm">Atendimento Direto com Especialista</span>
             </div>
             
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold">
-              Dicas Exclusivas de{" "}
-              <span className="text-accent">Concreto Usinado para Maringá e região</span>
+              Solicite Sua{" "}
+              <span className="text-accent">Consultoria em Concreto Usinado para Maringá e região</span>
             </h2>
             
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Siga nosso Instagram para receber conteúdo técnico, dicas práticas, 
-              cases de sucesso e insights valiosos sobre economia e qualidade em obras.
+              Fale direto no WhatsApp para apresentar sua obra, tirar dúvidas técnicas 
+              e receber uma orientação objetiva sobre economia, qualidade e desempenho.
             </p>
           </div>
 
-          {/* Instagram Features */}
+          {/* Consultation Benefits */}
           <div className="grid sm:grid-cols-3 gap-6 py-8">
             <div className="flex flex-col items-center gap-3 p-6 bg-background rounded-xl border border-border hover:border-accent/50 transition-all hover:scale-105">
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center group-hover:rotate-6 transition-transform">
-                <Heart className="text-accent" size={24} />
+                <ShieldCheck className="text-accent" size={24} />
               </div>
-              <h3 className="font-bold text-foreground">Cases Reais</h3>
+              <h3 className="font-bold text-foreground">Diagnóstico Inicial</h3>
               <p className="text-sm text-muted-foreground text-center">
-                Veja projetos reais e resultados comprovados
+                Entenda os riscos e oportunidades do seu projeto antes de decidir
               </p>
             </div>
 
@@ -46,9 +47,9 @@ export const InstagramSection = () => {
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center group-hover:rotate-6 transition-transform">
                 <MessageCircle className="text-accent" size={24} />
               </div>
-              <h3 className="font-bold text-foreground">Dicas Técnicas</h3>
+              <h3 className="font-bold text-foreground">Orientação Técnica</h3>
               <p className="text-sm text-muted-foreground text-center">
-                Conteúdo exclusivo sobre concreto usinado
+                Converse com quem conhece central, laboratório e aplicação em campo
               </p>
             </div>
 
@@ -56,9 +57,9 @@ export const InstagramSection = () => {
               <div className="w-12 h-12 bg-accent/10 rounded-full flex items-center justify-center group-hover:rotate-6 transition-transform">
                 <Bookmark className="text-accent" size={24} />
               </div>
-              <h3 className="font-bold text-foreground">Economia Garantida</h3>
+              <h3 className="font-bold text-foreground">Economia na Obra</h3>
               <p className="text-sm text-muted-foreground text-center">
-                Aprenda a otimizar custos sem perder qualidade
+                Receba direcionamento para reduzir custo sem comprometer qualidade
               </p>
             </div>
           </div>
@@ -71,9 +72,9 @@ export const InstagramSection = () => {
               className="text-base group"
               asChild
             >
-              <a href="https://www.instagram.com/fatoracconsultoria/" target="_blank" rel="noopener noreferrer">
-                <Instagram className="mr-2 group-hover:scale-110 transition-transform" />
-                Seguir @fatoracconsultoria
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-2 group-hover:scale-110 transition-transform" />
+                Solicitar Consultoria
               </a>
             </Button>
             
@@ -82,7 +83,7 @@ export const InstagramSection = () => {
           {/* Trust Badge */}
           <div className="pt-8 border-t border-border">
             <p className="text-sm text-muted-foreground">
-              📱 Conteúdo atualizado diariamente com insights valiosos para sua obra
+              Atendimento direto pelo WhatsApp para acelerar sua tomada de decisão
             </p>
           </div>
         </div>

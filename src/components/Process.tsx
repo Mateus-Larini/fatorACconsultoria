@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Search, FileText, CheckSquare, MessageCircle, ArrowRight } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 const steps = [
   {
@@ -118,7 +119,7 @@ export const Process = () => {
             sem comprometer qualidade
           </p>
           <Button variant="cta" size="lg" className="text-lg" asChild>
-            <a href="https://wa.me/5544991385218" target="_blank" rel="noopener noreferrer">
+            <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
               <MessageCircle className="mr-2" />
               Solicitar Análise Gratuita
             </a>

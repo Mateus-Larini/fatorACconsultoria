@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
-import { Instagram, CheckCircle, Building2, TrendingUp, Shield, Award } from "lucide-react";
+import { CheckCircle, Building2, TrendingUp, Shield, Award, MessageCircle } from "lucide-react";
 import willianPhotoConcretoUsinado from "@/assets/willian-photo.jpg";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 export const Hero = () => {
   return (
@@ -42,9 +43,9 @@ export const Hero = () => {
                 className="text-base md:text-lg group"
                 asChild
               >
-                <a href="https://www.instagram.com/fatoracconsultoria/" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="mr-2 group-hover:scale-110 transition-transform" />
-                  Seguir no Instagram
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2 group-hover:scale-110 transition-transform" />
+                  Solicitar Consultoria
                 </a>
               </Button>
               

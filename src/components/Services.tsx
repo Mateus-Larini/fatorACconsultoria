@@ -1,6 +1,7 @@
 import { Card } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Building2, Ruler, Home, HardHat, CheckCircle, Instagram } from "lucide-react";
+import { Building2, Ruler, Home, HardHat, CheckCircle, MessageCircle } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 const services = [
   {
@@ -97,9 +98,9 @@ export const Services = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button variant="cta" size="lg" className="text-lg" asChild>
-                <a href="https://www.instagram.com/fatoracconsultoria/" target="_blank" rel="noopener noreferrer">
-                  <Instagram className="mr-2" />
-                  Seguir no Instagram
+                <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                  <MessageCircle className="mr-2" />
+                  Solicitar Consultoria
                 </a>
               </Button>
               <Button variant="outline" size="lg" className="text-lg" asChild>

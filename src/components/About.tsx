@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { Instagram, Target, Lightbulb, Shield, Award, TrendingUp } from "lucide-react";
+import { Target, Lightbulb, Shield, Award, TrendingUp, MessageCircle } from "lucide-react";
+import { WHATSAPP_URL } from "@/lib/contact";
 
 export const About = () => {
   return (
@@ -93,12 +94,12 @@ export const About = () => {
             </h2>
             <p className="text-lg text-muted-foreground mb-8 max-w-2xl mx-auto">
               Imagine ter acesso ilimitado a um engenheiro especialista em concreto usinado que garante que cada decisão sobre sua obra seja tecnicamente perfeita e financeiramente inteligente.
-              Siga no Instagram para conteúdo exclusivo!
+              Fale no WhatsApp e receba uma orientação inicial para tomar decisões com mais segurança e economia.
             </p>
             <Button variant="cta" size="lg" className="text-lg" asChild>
-              <a href="https://www.instagram.com/fatoracconsultoria/" target="_blank" rel="noopener noreferrer">
-                <Instagram className="mr-2" />
-                Seguir no Instagram
+              <a href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+                <MessageCircle className="mr-2" />
+                Solicitar Consultoria
               </a>
             </Button>
           </aside>

@@ -1,14 +1,16 @@
 import { useState } from "react";
 import { Menu, X, Instagram } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const navItems = [
-  { name: "Início", href: "#home" },
-  { name: "Sobre", href: "#sobre" },
-  { name: "Metodologia", href: "#servicos" },
-  { name: "Processo", href: "#processo" },
-  { name: "Contato", href: "#contato" },
+  { name: "Início", href: "/#home" },
+  { name: "Sobre", href: "/#sobre" },
+  { name: "Metodologia", href: "/#servicos" },
+  { name: "Processo", href: "/#processo" },
+  { name: "Calculadora", href: "/calculadora" },
+  { name: "Contato", href: "/#contato" },
 ];
 
 export const Header = () => {
@@ -19,20 +21,20 @@ export const Header = () => {
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
-          <a href="#home" className="flex items-center hover:opacity-80 transition-opacity">
+          <Link to="/#home" className="flex items-center hover:opacity-80 transition-opacity">
             <img src={logo} alt="Fator AC Consultoria" className="h-14 md:h-16" />
-          </a>
+          </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center gap-8">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="text-foreground hover:text-accent transition-colors font-medium relative after:absolute after:bottom-0 after:left-0 after:w-0 after:h-0.5 after:bg-accent after:transition-all hover:after:w-full"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </nav>
 
@@ -60,14 +62,14 @@ export const Header = () => {
         {isMenuOpen && (
           <nav className="lg:hidden py-6 border-t border-border animate-fade-in space-y-1">
             {navItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
-                href={item.href}
+                to={item.href}
                 className="block py-3 px-4 text-foreground hover:text-accent hover:bg-accent/5 rounded-lg transition-all font-medium"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
             <div className="pt-4">
               <Button variant="cta" size="lg" className="w-full" asChild>

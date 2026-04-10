@@ -19,7 +19,7 @@ export const About = () => {
             <div className="inline-block px-4 py-2 bg-accent/10 border border-accent/20 rounded-full mb-6">
               <span className="text-accent font-semibold text-sm">Expertise Reconhecida no Mercado</span>
             </div>
-            <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Willian Silva</h1>
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-6">Willian Silva</h2>
             <p className="text-xl md:text-2xl text-accent font-semibold mb-4">
               Engenheiro Civil e Pós-Graduando em Tecnologia do Concreto
             </p>

@@ -4,13 +4,82 @@
       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
       xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
-
 
 <url>
   <loc>https://www.fatoracconsultoria.com.br/</loc>
-  <lastmod>2025-10-21T14:00:53+00:00</lastmod>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>1.0</priority>
 </url>
 
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/calculadora</loc>
+  <lastmod>2026-04-09T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/concreto-usinado-maringa</loc>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.9</priority>
+</url>
+
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/preco-concreto-usinado</loc>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/concreto-para-laje</loc>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/concreto-para-piso</loc>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/concreto-para-calcada</loc>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/fck-concreto</loc>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/slump-concreto</loc>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/bombeamento-concreto</loc>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
+
+<url>
+  <loc>https://www.fatoracconsultoria.com.br/areas-atendimento</loc>
+  <lastmod>2026-04-10T00:00:00+00:00</lastmod>
+  <changefreq>monthly</changefreq>
+  <priority>0.8</priority>
+</url>
 
 </urlset>

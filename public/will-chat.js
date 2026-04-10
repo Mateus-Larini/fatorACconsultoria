@@ -1,10 +1,5 @@
 (function () {
-  var isProduction = false;
-  var endpoints = {
-    production: "https://fluxos.concretousinadomaringa.com.br/webhook/AGENTEFATORAC",
-    test: "https://automacao.concretousinadomaringa.com.br/webhook-test/AGENTEFATORAC"
-  };
-  var endpoint = isProduction ? endpoints.production : endpoints.test;
+  var endpoint = "https://fluxos.concretousinadomaringa.com.br/webhook/AGENTEFATORAC";
   var sessionStorageKey = "willChatSessionId";
   var widgetId = "will-chat-root";
   var initialMessage = "Ol\u00e1! Eu sou o Will. Posso fazer uma estimativa r\u00e1pida de quanto dinheiro voc\u00ea pode economizar na concretagem da sua obra. Para \u00e9 começar, como é seu nome ?";
@@ -122,41 +117,68 @@
     var messagesContainer = options.messagesContainer;
     var input = options.input;
     var submitButton = options.submitButton;
+    var payload = {
+      message: message,
+      sessionId: getSessionId(),
+      timestamp: new Date().toISOString(),
+      source: "site"
+    };
     var typingIndicator = createTypingIndicator(messagesContainer);
 
     input.disabled = true;
     submitButton.disabled = true;
 
     try {
+      if (window.console && typeof window.console.log === "function") {
+        window.console.log("Enviando para webhook:", payload);
+      }
+
       var response = await window.fetch(endpoint, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-          sessionId: getSessionId(),
-          message: message
-        })
+        body: JSON.stringify(payload)
       });
 
       if (!response.ok) {
         throw new Error("HTTP " + response.status);
       }
 
-      var payload = await response.json();
+      var responsePayload = await response.json();
       typingIndicator.remove();
-      appendMessage(messagesContainer, "bot", normalizeReply(payload));
+      appendMessage(messagesContainer, "bot", normalizeReply(responsePayload));
     } catch (error) {
       typingIndicator.remove();
       appendMessage(messagesContainer, "bot", "N\u00e3o consegui concluir o c\u00e1lculo agora. Tente novamente em alguns instantes.");
       if (window.console && typeof window.console.error === "function") {
-        window.console.error("[will-chat] webhook error", error);
+        window.console.error("Erro ao enviar para webhook:", error);
       }
     } finally {
       input.disabled = false;
       submitButton.disabled = false;
       input.focus();
     }
+  }
+
+  function handleSubmit(options) {
+    var input = options.input;
+    var message = input.value.trim();
+
+    if (!message) {
+      input.focus();
+      return;
+    }
+
+    appendMessage(options.messagesContainer, "user", message);
+    input.value = "";
+
+    void sendMessage({
+      message: message,
+      messagesContainer: options.messagesContainer,
+      input: input,
+      submitButton: options.submitButton
+    });
   }
 
   function openWidget(root, input, messagesContainer) {
@@ -205,16 +227,21 @@
     form.addEventListener("submit", function (event) {
       event.preventDefault();
 
-      var message = input.value.trim();
-      if (!message) {
-        input.focus();
+      if (event.submitter && event.submitter === submitButton) {
         return;
       }
 
-      appendMessage(messagesContainer, "user", message);
-      input.value = "";
-      void sendMessage({
-        message: message,
+      handleSubmit({
+        messagesContainer: messagesContainer,
+        input: input,
+        submitButton: submitButton
+      });
+    });
+
+    submitButton.addEventListener("click", function (event) {
+      event.preventDefault();
+
+      handleSubmit({
         messagesContainer: messagesContainer,
         input: input,
         submitButton: submitButton

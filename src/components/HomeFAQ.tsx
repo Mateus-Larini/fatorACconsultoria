@@ -73,6 +73,13 @@ const faqItems = [
     linkHref: "/calculadora",
   },
   {
+    question: "Como saber se o preço do concreto que orçei é justo?",
+    answer:
+      "Use o Termômetro de Preços da Fator AC. Informe os dados do seu orçamento — volume, FCK, slump, tipo de brita, bombeamento e concreteira — e nossa inteligência artificial cruza as informações com o banco de dados regional para dizer, na hora, se você está pagando um valor justo ou se pode estar perdendo dinheiro. A análise é gratuita e o resultado chega pelo WhatsApp em até 2 minutos.",
+    linkText: "Usar o Termômetro de Preços agora",
+    linkHref: "/precos-de-concreto",
+  },
+  {
     question: "Quais cidades a Fator AC atende na região de Maringá?",
     answer:
       "A Fator AC Consultoria atende toda a região metropolitana de Maringá, incluindo Maringá, Sarandi, Marialva, Paiçandu, Mandaguari, Mandaguaçu, Jandaia do Sul, Floresta, Itambé e Iguaraçu. Cada projeto recebe visita técnica presencial para medição, análise das condições de acesso e especificação precisa do concreto ideal para sua obra.",

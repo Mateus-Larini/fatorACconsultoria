@@ -180,7 +180,7 @@ const ConcretoUsinadoMaringa = () => {
                     <TrendingUp className="text-accent mx-auto mb-4" size={36} />
                     <h3 className="font-bold text-lg mb-2">Economia Comprovada</h3>
                     <p className="text-sm text-muted-foreground">
-                      Engenheiros e construtores que contratam consultoria técnica economizam em média 35% no
+                      Engenheiros e construtores que contratam consultoria técnica economizam em média 20% no
                       custo do concreto, sem comprometer segurança.
                     </p>
                   </div>

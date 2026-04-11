@@ -51,6 +51,11 @@ export const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link to="/precos-de-concreto" className="text-muted-foreground hover:text-accent transition-colors">
+                  Termômetro de Preços
+                </Link>
+              </li>
+              <li>
                 <Link to="/#contato" className="text-muted-foreground hover:text-accent transition-colors">
                   Contato
                 </Link>
@@ -95,6 +100,11 @@ export const Footer = () => {
               <li>
                 <Link to="/areas-atendimento" className="text-muted-foreground hover:text-accent transition-colors text-sm">
                   Áreas de Atendimento
+                </Link>
+              </li>
+              <li>
+                <Link to="/precos-de-concreto" className="text-muted-foreground hover:text-accent transition-colors text-sm">
+                  Termômetro de Preços
                 </Link>
               </li>
             </ul>

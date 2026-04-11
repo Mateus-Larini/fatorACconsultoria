@@ -5,7 +5,8 @@ import { Breadcrumb } from "@/components/Breadcrumb";
 import { RelatedArticles } from "@/components/RelatedArticles";
 import { Button } from "@/components/ui/button";
 import { Helmet } from "react-helmet-async";
-import { MessageCircle, AlertTriangle, CheckCircle, DollarSign, TrendingUp, Truck } from "lucide-react";
+import { Link } from "react-router-dom";
+import { MessageCircle, AlertTriangle, CheckCircle, DollarSign, TrendingUp, Truck, Thermometer } from "lucide-react";
 import { WHATSAPP_URL, SITE_URL } from "@/lib/contact";
 
 const PrecoConcreto = () => {
@@ -110,7 +111,7 @@ const PrecoConcreto = () => {
                   <p>
                     A Fator AC analisa o projeto estrutural, as condições de acesso da obra e o método de
                     lançamento para especificar exatamente o concreto necessário. Isso significa economia de até
-                    35% no custo total da concretagem — sem comprometer resistência, durabilidade ou segurança.
+                    20% no custo total da concretagem — sem comprometer resistência, durabilidade ou segurança.
                   </p>
                 </div>
 
@@ -166,6 +167,31 @@ const PrecoConcreto = () => {
                     uma <strong className="text-foreground">decisão baseada em engenharia</strong> — onde cada
                     real investido tem justificativa técnica e retorno comprovado.
                   </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          {/* Termômetro de Preços CTA */}
+          <section className="py-12">
+            <div className="container mx-auto px-4">
+              <div className="max-w-4xl mx-auto">
+                <div className="rounded-2xl border border-accent/30 bg-card p-6 sm:p-8 flex flex-col sm:flex-row items-center gap-6">
+                  <div className="w-14 h-14 rounded-xl bg-accent/10 flex items-center justify-center shrink-0">
+                    <Thermometer className="text-accent" size={28} />
+                  </div>
+                  <div className="flex-1 text-center sm:text-left">
+                    <h3 className="text-xl font-bold mb-1">Já recebeu um orçamento de concreto?</h3>
+                    <p className="text-muted-foreground text-sm">
+                      Use nosso Termômetro de Preços para descobrir se o valor cobrado está dentro da média regional. Análise gratuita com resultado no WhatsApp.
+                    </p>
+                  </div>
+                  <Button variant="cta" size="lg" asChild className="shrink-0">
+                    <Link to="/precos-de-concreto">
+                      <Thermometer className="mr-2" size={18} />
+                      Analisar Preço
+                    </Link>
+                  </Button>
                 </div>
               </div>
             </div>

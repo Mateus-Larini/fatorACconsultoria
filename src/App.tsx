@@ -16,6 +16,9 @@ import FckConcreto from "./pages/FckConcreto";
 import SlumpConcreto from "./pages/SlumpConcreto";
 import BombeamentoConcreto from "./pages/BombeamentoConcreto";
 import AreasAtendimento from "./pages/AreasAtendimento";
+import TermometroPrecos from "./pages/TermometroPrecos";
+import { ExitIntentPopup } from "./components/ExitIntentPopup";
+import { WhatsAppFloat } from "./components/WhatsAppFloat";
 
 const queryClient = new QueryClient();
 
@@ -38,9 +41,12 @@ const App = () => (
             <Route path="/slump-concreto" element={<SlumpConcreto />} />
             <Route path="/bombeamento-concreto" element={<BombeamentoConcreto />} />
             <Route path="/areas-atendimento" element={<AreasAtendimento />} />
+            <Route path="/precos-de-concreto" element={<TermometroPrecos />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>
+          <WhatsAppFloat />
+          <ExitIntentPopup />
         </BrowserRouter>
       </TooltipProvider>
     </HelmetProvider>

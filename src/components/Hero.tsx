@@ -1,7 +1,8 @@
 import { Button } from "@/components/ui/button";
-import { CheckCircle, Building2, TrendingUp, Shield, Award, MessageCircle } from "lucide-react";
+import { CheckCircle, Building2, TrendingUp, Shield, Award, MessageCircle, Thermometer } from "lucide-react";
 import willianPhotoConcretoUsinado from "@/assets/willian-photo.jpg";
 import { WHATSAPP_URL } from "@/lib/contact";
+import { Link } from "react-router-dom";
 
 export const Hero = () => {
   return (
@@ -75,6 +76,18 @@ export const Hero = () => {
                 <CheckCircle className="text-accent" size={20} />
                 <span className="text-sm text-muted-foreground">Zero Risco Técnico</span>
               </div>
+            </div>
+
+            {/* Termômetro de Preços CTA */}
+            <div className="flex items-center gap-3 rounded-xl bg-accent/5 border border-accent/20 p-4 mt-2">
+              <Thermometer className="text-accent shrink-0" size={24} />
+              <div className="flex-1 min-w-0">
+                <p className="text-sm font-medium text-foreground">Já recebeu um orçamento de concreto?</p>
+                <p className="text-xs text-muted-foreground">Descubra se o preço é justo com nosso Termômetro de Preços.</p>
+              </div>
+              <Button variant="outline" size="sm" asChild className="shrink-0">
+                <Link to="/precos-de-concreto">Verificar</Link>
+              </Button>
             </div>
           </div>
 

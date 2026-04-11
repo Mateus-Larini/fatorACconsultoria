@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Menu, X, Instagram } from "lucide-react";
+import { Menu, X, Instagram, Thermometer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
@@ -39,11 +39,17 @@ export const Header = () => {
           </nav>
 
           {/* CTA Button */}
-          <div className="hidden lg:block">
-            <Button variant="cta" size="lg" asChild>
+          <div className="hidden lg:flex items-center gap-3">
+            <Button variant="cta" size="sm" asChild>
+              <Link to="/precos-de-concreto">
+                <Thermometer className="mr-1.5" size={16} />
+                Termômetro de Preços
+              </Link>
+            </Button>
+            <Button variant="outline" size="sm" asChild>
               <a href="https://www.instagram.com/fatoracconsultoria/" target="_blank" rel="noopener noreferrer">
-                <Instagram className="mr-2" size={18} />
-                Seguir no Instagram
+                <Instagram className="mr-1.5" size={16} />
+                Instagram
               </a>
             </Button>
           </div>
@@ -71,8 +77,14 @@ export const Header = () => {
                 {item.name}
               </Link>
             ))}
-            <div className="pt-4">
+            <div className="pt-4 space-y-2">
               <Button variant="cta" size="lg" className="w-full" asChild>
+                <Link to="/precos-de-concreto" onClick={() => setIsMenuOpen(false)}>
+                  <Thermometer className="mr-2" />
+                  Termômetro de Preços
+                </Link>
+              </Button>
+              <Button variant="outline" size="lg" className="w-full" asChild>
                 <a href="https://www.instagram.com/fatoracconsultoria/" target="_blank" rel="noopener noreferrer">
                   <Instagram className="mr-2" />
                   Seguir no Instagram

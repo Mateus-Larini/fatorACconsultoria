@@ -19,6 +19,7 @@ import AreasAtendimento from "./pages/AreasAtendimento";
 import TermometroPrecos from "./pages/TermometroPrecos";
 import { ExitIntentPopup } from "./components/ExitIntentPopup";
 import { WhatsAppFloat } from "./components/WhatsAppFloat";
+import { AnalyticsTracker } from "./components/AnalyticsTracker";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <AnalyticsTracker />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/calculadora" element={<Calculadora />} />
